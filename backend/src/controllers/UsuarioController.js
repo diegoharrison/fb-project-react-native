@@ -6,15 +6,13 @@ module.exports = {
 
         try {
 
-            //if (await Usuario.findOne({ email })) {
+            /* if (await Usuario.findOne({ email })) 
 
-            //    return res.status(400).send({ error: 'Email ou usuário já cadastrado!' });
-
-            //}
+                return res.status(400).send({ error: 'Email ou usuário já cadastrado!' }); */            
 
             const usuario = await Usuario.create(req.body)
 
-            //usuario.senha = undefined
+            usuario.senha = undefined
 
             return res.json(usuario)
 
